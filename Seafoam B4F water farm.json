@@ -1,0 +1,110 @@
+{
+	"name": "Seafoam cave B4F",
+	"author": "Pizzakiller",
+	"path": [
+		{
+			"condition": ["isPokemon1Usable"],
+			"actions": [
+				{
+					"condition": ["map", "Pokecenter Fuchsia"],
+					"action": ["moveToMap", "Fuchsia City"]
+				},
+				{
+					"condition": ["map", "Fuchsia City"],
+					"action": ["moveToMap", "Fuchsia City Stop House"]
+				},
+				{
+					"condition": ["map", "Fuchsia City Stop House"],
+					"action": ["moveToMap", "Route 19"]
+				},
+				{	
+					"condition": ["map", "Route 19"],
+					"action": ["moveToMap", "Route 20"]
+				},
+				{
+					"condition": ["map", "Route 20"],
+					"action": ["moveToCell", [60,32]]
+				},
+				{
+                    "condition": ["map", "Seafoam 1F"],
+                    "action": ["moveToMap", "Seafoam B1F"]
+                },
+                {
+                    "condition": ["map", "Seafoam B1F"],
+                    "action": ["moveToMap", "Seafoam B2F"]
+                },
+				{	"condition": ["map", "Seafoam B2F"],
+					"action": ["moveToMap", "Seafoam B3F"]
+				},
+				{	
+					"condition": ["map", "Seafoam B3F"],
+					"action": ["moveToWater"],
+					"action": ["moveToCell", [12,22]],
+					"action": ["moveToCell", [12,19]],
+					"action": ["moveToCell", [12,16]],
+					"action": ["moveToCell", [15,8]],
+					"action": ["moveToCell", [12,8]]
+				},
+				{	
+					"condition": ["map", "Seafoam B4F"],
+					"action": ["moveToRectangle", [9,15], [13,20]]
+				},
+			]	
+		},
+		{
+			"actions": [
+				{
+					"condition": ["map", "Seafoam B4F"],
+					"action": ["moveToMap", "Seafoam B3F"]
+				},
+				{
+					"condition": ["map", "Seafoam B3F"],
+					"action": ["moveToWater"],
+					"action": ["moveToMap", "Seafoam B2F"]
+				},
+				{
+                    "condition": ["map", "Seafoam B2F"],
+                    "action": ["moveToMap", "Seafoam B1F"]
+                },
+				{
+					"condition": ["map", "Seafoam B1F"],
+					"action": ["moveToMap", "Seafoam 1F"]
+				},
+				{
+					"condition": ["map", "Seafoam 1F"],
+					"action": ["moveToMap", "Route 20"]
+				},
+				{
+					"condition": ["map", "Route 20"],
+					"action": ["moveToMap", "Route 19"]
+				},
+				{
+					"condition": ["map", "Route 19"],
+					"action": ["moveToMap", "Fuchsia City Stop House"]
+				},
+				{
+					"condition": ["map", "Fuchsia City Stop House"],
+					"action": ["moveToMap", "Fuchsia City"]
+				},
+				{
+					"condition": ["map", "Fuchsia City"],
+					"action": ["moveToMap", "Pokecenter Fuchsia"]
+				},
+				{
+					"condition": ["map", "Pokecenter Fuchsia"],
+					"action": ["usePokecenter"]
+				}
+			]
+		}
+	],
+	"battle": [
+		{
+			"condition": ["isOpponentShiny"],
+			"action": ["useItem", "Ultra Ball", "Great Ball", "Pokeball"]
+		},
+		{
+			"condition": ["activePokemonNumber", "=", 1],
+			"action": ["attack"]
+		}
+	]
+}
