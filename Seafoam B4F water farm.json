@@ -59,6 +59,10 @@
 				},
 				{
 					"condition": ["map", "Seafoam B3F"],
+					"action": ["moveToCell", [15,8]],
+					"action": ["moveToCell", [12,16]],
+					"action": ["moveToCell", [12,19]],
+					"action": ["moveToCell", [12,22]],
 					"action": ["moveToWater"],
 					"action": ["moveToMap", "Seafoam B2F"]
 				},
