@@ -26,13 +26,13 @@
 					"action": ["moveToCell", [60,32]]
 				},
 				{
-                    "condition": ["map", "Seafoam 1F"],
-                    "action": ["moveToMap", "Seafoam B1F"]
-                },
-                {
-                    "condition": ["map", "Seafoam B1F"],
-                    "action": ["moveToMap", "Seafoam B2F"]
-                },
+                    			"condition": ["map", "Seafoam 1F"],
+                    			"action": ["moveToMap", "Seafoam B1F"]
+                		},
+                		{
+                    			"condition": ["map", "Seafoam B1F"],
+                    			"action": ["moveToMap", "Seafoam B2F"]
+                		},
 				{	"condition": ["map", "Seafoam B2F"],
 					"action": ["moveToMap", "Seafoam B3F"]
 				},
@@ -52,24 +52,24 @@
 			]	
 		},
 		{
-			"actions": [
+					"actions": [
 				{
 					"condition": ["map", "Seafoam B4F"],
 					"action": ["moveToMap", "Seafoam B3F"]
 				},
 				{
 					"condition": ["map", "Seafoam B3F"],
-					"action": ["moveToCell", [15,8]],
+					"action": ["moveToCell", [12,10]],
 					"action": ["moveToCell", [12,16]],
 					"action": ["moveToCell", [12,19]],
 					"action": ["moveToCell", [12,22]],
-					"action": ["moveToWater"],
+					"action": ["moveToCell", [12,26]],
 					"action": ["moveToMap", "Seafoam B2F"]
 				},
 				{
-                    "condition": ["map", "Seafoam B2F"],
-                    "action": ["moveToMap", "Seafoam B1F"]
-                },
+                			 "condition": ["map", "Seafoam B2F"],
+                    			"action": ["moveToMap", "Seafoam B1F"]
+        			 },
 				{
 					"condition": ["map", "Seafoam B1F"],
 					"action": ["moveToMap", "Seafoam 1F"]
