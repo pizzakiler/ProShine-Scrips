@@ -55,7 +55,8 @@
 					"actions": [
 				{
 					"condition": ["map", "Seafoam B4F"],
-					"action": ["moveToMap", "Seafoam B3F"]
+					"action": ["moveToCell", [11,22]],
+					"action": ["moveToCell", [9,6]]
 				},
 				{
 					"condition": ["map", "Seafoam B3F"],
@@ -76,7 +77,7 @@
 				},
 				{
 					"condition": ["map", "Seafoam 1F"],
-					"action": ["moveToMap", "Route 20"]
+					"action": ["moveToCell", [13,16]],
 				},
 				{
 					"condition": ["map", "Route 20"],
