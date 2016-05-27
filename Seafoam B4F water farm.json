@@ -38,7 +38,21 @@
 				},
 				{	
 					"condition": ["map", "Seafoam B3F"],
-					"action": ["moveToWater"],
+					"action": ["moveToWater"]
+				},
+				{
+					"condition": ["moveToWater"],
+					"action": ["moveToCell", [12,22]]
+				},
+				{
+					"condition": ["Cell", [12,22]],
+					"action": ["moveToCell", [12,19]]
+				},
+				{
+					"condition": ["Cell", [12,19]],
+					"action": ["moveToCell", [12,16]]
+				},
+				{
 					"action": ["moveToCell", [12,22]],
 					"action": ["moveToCell", [12,19]],
 					"action": ["moveToCell", [12,16]],
