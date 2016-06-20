@@ -1,0 +1,97 @@
+name = "aio"
+author = "Pizzakiller"
+description = [[
+	1-100 without evv
+]]
+--including the normal librarys
+require "libs\\librarys"
+--including the maps
+require "libs\\maps.lua"
+
+map = kanto_dij()
+
+function onPathAction()
+	if getPokemonLevel(1) < 10 then
+		if isPokemonUsable(1) then
+			if moveTo("Route 1") then
+				moveToRectangle(10, 11, 26, 13)
+			end
+		else
+			if moveTo("Pokecenter Viridian") then
+				usePokecenter()
+			end
+		end
+	elseif getPokemonLevel(1) < 14 then
+		if isPokemonUsable(1) then
+			if moveTo("Route 2") then
+				if moveToRectangle(7, 10, 21, 15) == false then
+					return moveTo("Pewter City")
+				else
+					return
+				end
+			end
+		else
+			if moveTo("Pokecenter Pewter") then
+				usePokecenter()
+			end
+		end
+	elseif getPokemonLevel(1) < 18 then
+		if isPokemonUsable(1) then
+			if moveTo("Route 3") then
+				moveToRectangle(30, 29, 36, 31)
+			end
+		else
+			if moveTo("Pokecenter Route 3") then
+				usePokecenter()
+			end
+		end
+	elseif getPokemonLevel(1) < 24 then
+		if isPokemonUsable(1) then
+			if moveTo("Mt. Moon 1F") then
+				moveToRectangle(32, 53, 36, 55)
+			end
+		else
+			if moveTo("Pokecenter Route 3") then
+				usePokecenter()
+			end
+		end
+	elseif getPokemonLevel(1) < 40 then
+		if isPokemonUsable(1) then
+			if moveTo("Pokemon Tower 2F") then
+				moveNearExit("Pokemon Tower 1F")
+			end
+		else
+			if moveTo("Pokecenter Lavendar") then
+				usePokecenter()
+			end
+		end
+	elseif getPokemonLevel(1) < 60 then
+		if isPokemonUsable(1) then
+			if moveTo("Cinnabar mansion 3") then
+				moveToRectangle(1, 12, 13, 18)
+			end
+		else
+			if moveTo("Pokecenter Cinnabar") then
+				usePokecenter()
+			end
+		end
+	else --to lvl 100
+		if isPokemonUsable(1) then
+			if moveTo("Victory Road 3F") then
+				moveNearExit("Indigo Plateu")
+			end
+		else
+			if moveTo("Indigo Plateu Center") then
+				usePokecenter()
+			en
+		end
+	end
+end
+
+function onBattleAction()
+	if isOpponentShiny() then
+		return useItem("Ultra Ball") or useItem("Great Ball") or useItem("Pokeball")
+	else
+		return attack() or sendUsablePokemon() or run() or sendAnyPokemon()
+	end
+end
